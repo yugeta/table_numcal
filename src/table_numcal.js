@@ -585,7 +585,8 @@
     // check element-tag
     if(cell.tagName !== "TD"){return;}
     this.flg_target = cell;
-    var currentTable = new LIB().upperSelector(cell , "table");
+    // var currentTable = new LIB().upperSelector(cell , "table");
+    var currentTable = cell.parentNode.parentNode;
     if(this.flg_table){
       if(this.flg_table !== currentTable){
         e.preventDefault();
@@ -648,7 +649,8 @@
     var cell = e.target;
     if(!cell || cell.tagName !== "TD"){return;}
 
-    var currentTable = new LIB().upperSelector(cell , "table");
+    // var currentTable = new LIB().upperSelector(cell , "table");
+    var currentTable = cell.parentNode.parentNode;
     if(currentTable !== this.flg_table){return;}
 
     // draws
