@@ -29,6 +29,10 @@ ver 0.1 : base-system
 # Request
 - ctlを押しながら選択（セル個別選択）tableをまたがっての選択が可能
 
+# Issue
+- 選択モード中に別のtableセルを選択したらエラーになってしまう問題
+- 同じtable内でtbody(thead,tfoot)をまたがる際にエラーになる問題
+
 # Author-info
 - Company : http://myntinc.com
 - Blog    : http://wordpress.ideacompo.com/
