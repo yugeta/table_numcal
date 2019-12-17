@@ -579,13 +579,21 @@
 
 
   MAIN.prototype.clickWindow_down = function(e){
-// console.log(e);
     var cell = e.target;
     if(!cell){return;}
 
-    // check element
+    // check element-tag
     if(cell.tagName !== "TD"){return;}
     this.flg_target = cell;
+    var currentTable = new LIB().upperSelector(cell , "table");
+    if(this.flg_table){
+      if(this.flg_table !== currentTable){
+        e.preventDefault();
+        this.flg_pos = false;
+        this.clearCell();
+      }
+    }
+    this.flg_table = currentTable;
 
     // // shift-key
     // this.key_shift =  (e.shiftKey === true) ? true : false;
@@ -625,7 +633,6 @@
 
       // draw
       this.calc({target:cell});
-      // cell.setAttribute("data-numcul" , "1");
 
       // flg
       // 
@@ -641,21 +648,18 @@
     var cell = e.target;
     if(!cell || cell.tagName !== "TD"){return;}
 
+    var currentTable = new LIB().upperSelector(cell , "table");
+    if(currentTable !== this.flg_table){return;}
+
     // draws
     this.drawCells(this.flg_pos , this.getTablePosition(cell));
   };
   MAIN.prototype.clickWindow_up = function(e){
-    // if(!this.flg_mode){return;}
 
     this.flg_mode = false;
     this.flg_target = false;
-    // this.flg_pos    = false;
   };
 
-  // MAIN.prototype.clickWindow_scroll = function(e){
-  //   if(this.flg_mode === "normal"){return;}
-  //   e.preventDefault();
-  // };
 
   MAIN.prototype.getTablePosition = function(cell){
     if(!cell){return  {x:null,y:null}};
@@ -679,9 +683,7 @@
   };
 
   MAIN.prototype.drawCells = function(pos1 , pos2){
-    // if(!this.flg_target){return;}
     if(pos1 === pos2){return;}
-    // console.log([pos1,pos2]);
 
     // clear
     this.clearCell();
@@ -700,11 +702,9 @@
       var tds = tr.querySelectorAll(":scope > td");
       for(var x=x1; x<=x2; x++){
         var td = tds[x];
-        // td.setAttribute("data-numcul" , "1");
         this.calc({target:td});
       }
     }
-
   };
 
 

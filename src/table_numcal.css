@@ -1,6 +1,9 @@
 table td{
   cursor:copy;
 }
+table td:hover{
+  background-color:#EEF;
+}
 
 
 table td[data-numcul='1'],
