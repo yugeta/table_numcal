@@ -29,10 +29,12 @@ ver 0.1 : base-system
 # Request
 - ctlを押しながら選択（セル個別選択）tableをまたがっての選択が可能
 - 行、列の一括選択 -> tableの1行目がthセルの場合、以下の列を選択する。(この場合、thead,tbodyが切り替わるケースがあるため、要仕様検討)
+- 合計値を平均値に切り替えられるようにする。
 
 # Issue
 - 選択モード中に別のtableセルを選択したらエラーになってしまう問題 (fix : 2019.12.17)
 - 同じtable内でtbody(thead,tfoot)をまたがる際にエラーになる問題 -> tbodyが別の場合は対象外とする (fix : 2019.12.17)
+- table外を選択したときに、合計値表示ウィンドウ（エレメント）を閉じる (fix : 2019.12.17)
 
 # Author-info
 - Company : http://myntinc.com

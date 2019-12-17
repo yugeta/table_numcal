@@ -574,6 +574,7 @@
         tds[j].removeAttribute("data-numcul")
       }
     }
+    this.view_remove();
   };
 
 
@@ -583,7 +584,11 @@
     if(!cell){return;}
 
     // check element-tag
-    if(cell.tagName !== "TD"){return;}
+    if(cell.tagName !== "TD"){
+      this.clearCell();
+      return;
+    }
+
     this.flg_target = cell;
     // var currentTable = new LIB().upperSelector(cell , "table");
     var currentTable = cell.parentNode.parentNode;
