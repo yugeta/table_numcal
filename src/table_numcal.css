@@ -1,0 +1,20 @@
+table td{
+  cursor:copy;
+}
+
+
+table td[data-numcul='1'],
+table th[data-numcul='1']{
+  background-color:#FCC;
+}
+
+.table-numcal{
+  position:fixed;
+  top:4px;
+  right:4px;
+  border:1px solid #ccc;
+  background-color:white;
+  border-radius:4px;
+  padding:8px;
+  font-size:12px;
+}

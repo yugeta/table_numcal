@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Sample</title>
+  <link rel="stylesheet" href="sample.css">
+
+  <script src="../src/table_numcal.js"></script>
+</head>
+<body>
+  <div class="lists" style="overflow-x:auto;">
+    <table>
+      <thead>
+        <tr data-tablesort="header">
+          <th class="num" data-sort="none">#</th>
+          <!-- <th class="id">ID</th> -->
+          <th class="date" data-sort="date" data-tablesort="header">日<span class="tableSort-button"><span></span></span></th>
+          <th class="kamoku" data-tablesort="header">費目<span class="tableSort-button"><span></span></span></th>
+          <th class="shop" data-tablesort="header">支払先<span class="tableSort-button"><span></span></span></th>
+          <th class="shop" data-tablesort="header">取引先<span class="tableSort-button"><span></span></span></th>
+          <!-- <th class="price" data-sort="none">単価</th>
+          <th class="count">個数</th> -->
+          <th class="subtotal" data-sort="number" data-tablesort="header">税抜<span class="tableSort-button"><span></span></span></th>
+          <th class="tax" data-sort="number" data-tablesort="header">税率<span class="tableSort-button"><span></span></span></th>
+          <th class="impost" data-sort="number" data-tablesort="header">税額<span class="tableSort-button"><span></span></span></th>
+          <th class="total" data-sort="number" data-tablesort="header">税込<span class="tableSort-button"><span></span></span></th>
+          <th class="holding_tax" data-sort="number" data-tablesort="header">源泉<span class="tableSort-button"><span></span></span></th>
+          <th class="pay" data-sort="number" data-tablesort="header">支払<span class="tableSort-button"><span></span></span></th>
+          <th class="comment" data-tablesort="header">内容<span class="tableSort-button"><span></span></span></th>
+          <th class="memo" data-tablesort="header">備考<span class="tableSort-button"><span></span></span></th>
+        </tr>
+      </thead>
+  
+      <tbody class="data">
+  <tr data-id="2" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>2</td> -->
+    <td class="date">12/05</td>
+    <td class="kamoku">食費</td>
+    <td class="shop">三和　小川店</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥4,498</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥359</td>
+    <td class="total">¥4,857</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">食品</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="3" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>3</td> -->
+    <td class="date">12/06</td>
+    <td class="kamoku">雑費</td>
+    <td class="shop">日本郵便株式会社　町田金森郵便局</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥3,780</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥0</td>
+    <td class="total">¥3,780</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">年賀状</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="4" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>4</td> -->
+    <td class="date">12/08</td>
+    <td class="kamoku">食費</td>
+    <td class="shop">クリエイトSD　町田金森店</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥1,099</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥87</td>
+    <td class="total">¥1,186</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">食品</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="5" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>5</td> -->
+    <td class="date">12/06</td>
+    <td class="kamoku">食費</td>
+    <td class="shop">クリエイトSD　町田金森店</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥682</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥54</td>
+    <td class="total">¥736</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">食品</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="6" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>6</td> -->
+    <td class="date">12/06</td>
+    <td class="kamoku">雑費</td>
+    <td class="shop">クリエイトSD　町田金森店</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥168</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥16</td>
+    <td class="total">¥184</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">洗剤</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="7" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>7</td> -->
+    <td class="date">12/03</td>
+    <td class="kamoku">食費</td>
+    <td class="shop">クリエイトSD　町田金森店</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥702</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥56</td>
+    <td class="total">¥758</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">食品</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="8" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>8</td> -->
+    <td class="date">12/03</td>
+    <td class="kamoku">雑費</td>
+    <td class="shop">クリエイトSD　町田金森店</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥596</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥59</td>
+    <td class="total">¥655</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">洗剤など</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="9" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>9</td> -->
+    <td class="date">12/02</td>
+    <td class="kamoku">図書費</td>
+    <td class="shop">久美堂</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥1,650</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥0</td>
+    <td class="total">¥1,650</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">雑誌</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="10" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>10</td> -->
+    <td class="date">12/03</td>
+    <td class="kamoku">教育費</td>
+    <td class="shop">ブックオフ 町田中央通り店</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥1,228</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥122</td>
+    <td class="total">¥1,350</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">参考書</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="11" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>11</td> -->
+    <td class="date">12/03</td>
+    <td class="kamoku">教育費</td>
+    <td class="shop">ブックファースト</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥3,780</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥378</td>
+    <td class="total">¥4,158</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">参考書</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="12" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>12</td> -->
+    <td class="date">12/02</td>
+    <td class="kamoku">雑費</td>
+    <td class="shop">美容院</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥1,650</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥0</td>
+    <td class="total">¥1,650</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">カット</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="13" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>13</td> -->
+    <td class="date">12/01</td>
+    <td class="kamoku">食費</td>
+    <td class="shop">マクドナルド</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥1,778</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥142</td>
+    <td class="total">¥1,920</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">食品</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="14" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>14</td> -->
+    <td class="date">12/01</td>
+    <td class="kamoku">雑費</td>
+    <td class="shop">キャンドゥ</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥200</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥20</td>
+    <td class="total">¥220</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">文房具</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="15" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>15</td> -->
+    <td class="date">12/01</td>
+    <td class="kamoku">食費</td>
+    <td class="shop">駄菓子屋</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥600</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥48</td>
+    <td class="total">¥648</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">駄菓子</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="16" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>16</td> -->
+    <td class="date">12/02</td>
+    <td class="kamoku">雑費</td>
+    <td class="shop">ダイソー　町田東急ツインズ店</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥400</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥40</td>
+    <td class="total">¥440</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">雑貨</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="17" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>17</td> -->
+    <td class="date">12/02</td>
+    <td class="kamoku">食費</td>
+    <td class="shop">ダイソー　町田東急ツインズ店</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥200</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥16</td>
+    <td class="total">¥216</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">食品</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="18" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>18</td> -->
+    <td class="date">12/02</td>
+    <td class="kamoku">教育費</td>
+    <td class="shop">天</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥15,000</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥0</td>
+    <td class="total">¥15,000</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">定期など</td>
+    <td class="memo"></td>
+  </tr>
+  
+  <tr data-id="19" data-mode="">
+    <th class="num"></th>
+    <!-- <td class='id'>19</td> -->
+    <td class="date">12/04</td>
+    <td class="kamoku">教育費</td>
+    <td class="shop">ピアノ</td>
+    <td class="company"></td>
+    <!-- <td class='price'></td>
+    <td class='count'>1</td> -->
+    <td class="subtotal">¥8,000</td>
+    <td class="tax">0%</td>
+    <td class="impost">¥0</td>
+    <td class="total">¥8,000</td>
+    <td class="holding_tax"></td>
+    <td class="pay"></td>
+    <td class="comment">月謝</td>
+    <td class="memo"></td>
+  </tr>
+  
+  
+      </tbody>
+  
+      <tfoot class="total">
+        <tr>
+          <th class="num">合計</th>
+          <!-- <td class="id"></td> -->
+          <td class="date"></td>
+          <td class="kamoku"></td>
+          <td class="shop"></td>
+          <td class="company"></td>
+          <td class="subtotal" data-flg="total">¥46,011</td>
+          <td class="tax"></td>
+          <td class="impost" data-flg="total">¥1,397</td>
+          <td class="total" data-flg="total">¥47,408</td>
+          <td class="holding_tax" data-flg="total">¥0</td>
+          <td class="pay" data-flg="total">¥0</td>
+          <td class="comment"></td>
+          <td class="memo"></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+</body>
+</html>
